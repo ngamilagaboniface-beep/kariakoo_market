@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kariakoo Soko B2B - Wireframes</title>
+<style>
+  :root { --green:#009639; --gold:#FFB800; --dark:#121826; --muted:#6b7280; --bg:#f5f5f7; --card:#fff; --red:#e11d48; --blue:#2563eb; }
+  *{box-sizing:border-box;margin:0;padding:0;font-family: 'Inter', -apple-system,system-ui,Segoe UI,Roboto,Arial,sans-serif;}
+  body{background:#e5e7eb;color:#1f2937;display:flex;flex-wrap:wrap;gap:32px;justify-content:center;padding:32px;}
+  .phone{width:390px;background:var(--bg);border-radius:36px;border:10px solid #111;box-shadow:0 20px 60px rgba(0,0,0,.25);overflow:hidden;position:relative;min-height:820px;display:flex;flex-direction:column;}
+  .statusbar{height:32px;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:0 24px;font-size:13px;font-weight:600;}
+  .appbar{background:#fff;padding:12px 16px;border-bottom:1px solid #e5e7eb;}
+  .appbar h2{font-size:18px;}
+  .content{flex:1;overflow-y:auto;padding:14px 16px 90px 16px;}
+  .bottom-nav{position:absolute;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e7eb;display:flex;justify-content:space-around;padding:10px 8px 22px;font-size:11px;color:var(--muted);}
+  .nav-item{text-align:center;flex:1;}
+  .nav-item.active{color:var(--green);font-weight:700;}
+  .nav-item span{display:block;font-size:20px;margin-bottom:2px;}
+  .pill{background:#eefbf3;color:#067a3a;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:700;}
+  .card{background:var(--card);border-radius:16px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.06);margin-bottom:12px;}
+  .chip-row{display:flex;gap:8px;overflow-x:auto;padding:6px 0;white-space:nowrap;}
+  .chip{background:#fff;border:1px solid #ddd;border-radius:999px;padding:7px 14px;font-size:12px;font-weight:600;}
+  .chip.active{background:var(--dark);color:#fff;border-color:var(--dark);}
+  .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .product{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .product-img{height:130px;background:#ddd;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;}
+  .product-body{padding:10px;}
+  .moq{font-size:11px;color:var(--muted);}
+  .price{font-weight:800;font-size:14px;}
+  .supplier{font-size:11px;color:var(--muted);margin-top:3px;}
+  .badge-gold{background:var(--gold);color:#111;padding:2px 6px;border-radius:6px;font-size:10px;font-weight:800;}
+  .searchbar{background:#f0f2f5;border-radius:12px;padding:12px 14px;color:#888;font-size:14px;margin:8px 0;}
+  .label-sw{font-size:11px;color:var(--muted);}
+  .chat-bubble{max-width:75%;padding:10px 12px;border-radius:14px;font-size:13px;margin-bottom:8px;line-height:1.4;}
+  .from-them{background:#fff;border:1px solid #e5e7eb;border-top-left-radius:4px;}
+  .from-me{background:#d6f5e1;margin-left:auto;border-top-right-radius:4px;}
+  .offer-card{background:#fffbe6;border:1px solid #f5d67a;border-radius:12px;padding:12px;margin:8px 0;}
+  .btn{border:none;border-radius:10px;padding:12px;font-weight:700;font-size:14px;cursor:pointer;width:100%;}
+  .btn-green{background:var(--green);color:#fff;}
+  .btn-outline{background:#fff;border:1px solid #ccc;}
+  .kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .kpi{background:#fff;border-radius:14px;padding:14px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.05);}
+  .kpi b{font-size:20px;display:block;}
+  .kpi span{font-size:11px;color:var(--muted);}
+  .chat-input{position:absolute;bottom:70px;left:12px;right:12px;background:#fff;border:1px solid #ddd;border-radius:24px;padding:10px 14px;display:flex;justify-content:space-between;color:#888;font-size:13px;}
+  .rfq-banner{background:linear-gradient(135deg,#009639,#007030);color:#fff;border-radius:16px;padding:16px;margin-bottom:14px;}
+  h3.section-title{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:14px 0 8px;}
+  .frame-label{text-align:center;font-weight:800;margin-bottom:8px;font-family:monospace;color:#334155;}
+  .wrap-col{display:flex;flex-direction:column;align-items:center;}
+</style>
+</head>
+<body>
+
+<!-- FRAME 1: BUYER HOME FEED -->
+<div class="wrap-col">
+<div class="frame-label">1. BUYER HOME FEED - iOS/Android</div>
+<div class="phone">
+  <div class="statusbar"><span>9:41</span><span>••• 📶 🔋</span></div>
+  <div class="appbar">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div><span style="font-size:12px;color:var(--muted)">Inapatikana Kariakoo</span><br><b style="font-size:18px">Kariakoo Soko <span style="color:var(--gold)">B2B</span></b></div>
+      <div style="display:flex;gap:10px;font-size:20px">🔔 🛒</div>
+    </div>
+    <div class="searchbar">🔍 Tafuta jumla: vitenge, viatu, electronics...</div>
+    <div style="font-size:12px;color:var(--muted)">Deliver to: <b>Mwanza • Badilisha</b></div>
+  </div>
+  <div class="content">
+    <div class="rfq-banner">
+      <b>Tuma Ombi la Nukuu / RFQ</b>
+      <div style="font-size:12px;opacity:.9;margin-top:4px">Wauzaji 1,240+ wa Kariakoo wako tayari kukupatia bei</div>
+      <button style="background:#fff;color:#007030;border:none;border-radius:8px;padding:8px 14px;font-weight:700;margin-top:10px;font-size:12px">Chapisha RFQ Bure →</button>
+    </div>
+
+    <div class="chip-row">
+      <div class="chip active">Zote</div>
+      <div class="chip">Vitenge & Mitumba</div>
+      <div class="chip">Electronics</div>
+      <div class="chip">Viatu</div>
+      <div class="chip">Vifaa vya Jikoni</div>
+      <div class="chip">Vipodozi</div>
+    </div>
+
+    <h3 class="section-title">Wauzaji Waliothibitishwa • Gold Supplier</h3>
+    <div class="product-grid">
+      <div class="product">
+        <div class="product-img">Vitenge Kitenge</div>
+        <div class="product-body">
+          <div class="price">TZS 18,000 <span style="font-weight:400;color:#666;font-size:11px">/pc</span></div>
+          <div class="moq">MOQ 12 pcs • Was: 25,000</div>
+          <div class="supplier">Al-Huda Traders <span class="badge-gold">GOLD</span></div>
+          <div style="font-size:10px;color:#888">⏱ 98% on-time • Kariakoo, Dar</div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-img">Solar Radio</div>
+        <div class="product-body">
+          <div class="price">TZS 14,500 <span style="font-weight:400;color:#666;font-size:11px">/pc</span></div>
+          <div class="moq">MOQ 50 pcs • Tier 3</div>
+          <div class="supplier">Msimbazi Electronics <span class="badge-gold">GOLD</span></div>
+          <div style="font-size:10px;color:#888">✓ Muagizaji Aliyethibitishwa</div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-img">Sneakers Jumla</div>
+        <div class="product-body">
+          <div class="price">TZS 22,000 – 32,000</div>
+          <div class="moq">Bei ya Tier: 1-11 / 12-99 / 100+</div>
+          <div class="supplier">City Shoes Ltd <span class="badge-gold">GOLD</span></div>
+          <div style="font-size:10px;color:#888">Miaka 5+ Kariakoo</div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-img">Blender 3-in-1</div>
+        <div class="product-body">
+          <div class="price">TZS 45,000 <span style="font-weight:400;color:#666;font-size:11px">/pc</span></div>
+          <div class="moq">MOQ 6 katoni</div>
+          <div class="supplier">JMK Home <span style="background:#e0f2fe;color:#0369a1;padding:2px 6px;border-radius:6px;font-size:10px;font-weight:700">LOCAL MFG</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">Bei ya Jumla Inayo-Haribika</h3>
+    <div class="card">
+      <b>Flash MOQ - Saa 48 pekee</b><br>
+      <span style="font-size:13px">Smart Watch X8 - punguza hadi TZS 19,000 ukinunua 100+</span>
+      <div style="margin-top:6px;font-size:11px;color:var(--muted)">Wauzaji 7 wanashindana • Inaisha saa 18</div>
+    </div>
+  </div>
+  <div class="bottom-nav">
+    <div class="nav-item active"><span>🏠</span>Nyumbani</div>
+    <div class="nav-item"><span>📋</span>RFQ</div>
+    <div class="nav-item"><span>💬</span>Chat<br><b style="color:var(--red)">3</b></div>
+    <div class="nav-item"><span>📦</span>Maagizo</div>
+    <div class="nav-item"><span>👤</span>Akaunti</div>
+  </div>
+</div>
+</div>
+
+<!-- FRAME 2: CHAT / NEGOTIATION SCREEN -->
+<div class="wrap-col">
+<div class="frame-label">2. CHAT / NEGOTIATION - Alibaba-Style IM</div>
+<div class="phone" style="background:#f2f5f0;">
+  <div class="statusbar"><span>9:41</span><span>••• 📶 🔋</span></div>
+  <div class="appbar" style="display:flex;align-items:center;gap:10px;">
+    <span>←</span>
+    <div style="flex:1">
+      <b>Al-Huda Traders <span class="badge-gold">GOLD</span></b><br>
+      <span style="font-size:11px;color:var(--green)">● Online • Anajibu kwa dk 4 • Swahili/EN</span>
+    </div>
+    <span>📞 ⋮</span>
+  </div>
+  <!-- Order Context Bar -->
+  <div style="background:#fffbe9;border-bottom:1px solid #f0d68a;padding:10px 16px;font-size:12px;">
+    <b>Order #KS-8821 - Vitenge Kitenge</b><br>
+    Qty: 120 pcs • Dar → Mwanza<br>
+    <span style="color:#b45309">Hali: Inajadiliwa Bei</span>
+  </div>
+  <div class="content" style="padding-top:14px;">
+    <div style="text-align:center;font-size:11px;color:#888;margin-bottom:10px">Leo, 10:34 AM</div>
+    
+    <div class="chat-bubble from-them">Habari Fatuma, karibu Kariakoo Soko. Unahitaji rangi zipi?</div>
+    <div class="chat-bubble from-me">Nahitaji pcs 120. Unaweza bei ya mwisho? Niko Mwanza.</div>
+    <div class="chat-bubble from-them">Bei ya kawaida 21,000 kwa 100+. Kwa wewe 19,500. Usafiri ni wako.</div>
+    
+    <!-- Inline Offer Card - KEY FEATURE -->
+    <div class="offer-card">
+      <div style="font-size:11px;font-weight:800;color:#92400e;">💬 OFA RASMI KUTOKA MUUZAJI</div>
+      <div style="margin:6px 0;font-size:13px"><b>Vitenge Kitenge - 120 pcs</b></div>
+      <table style="font-size:12px;width:100%;">
+        <tr><td>Bei ya unit:</td><td align="right"><b>TZS 19,000 /pc</b></td></tr>
+        <tr><td>Jumla bidhaa:</td><td align="right">TZS 2,280,000</td></tr>
+        <tr><td>Usafiri Mabasi:</td><td align="right">TZS 45,000</td></tr>
+        <tr><td colspan="2"><hr style="border:none;border-top:1px dashed #ccc;margin:4px 0"></td></tr>
+        <tr><td><b>Jumla:</b></td><td align="right"><b>TZS 2,325,000</b></td></tr>
+      </table>
+      <div style="font-size:11px;color:#666;margin-top:4px;">Ofa inaisha masaa 24 • Malipo Salama Escrow</div>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button class="btn btn-green" style="flex:1">Kubali & Lipa</button>
+        <button class="btn btn-outline" style="flex:1">Pinga Bei</button>
+      </div>
+    </div>
+
+    <div class="chat-bubble from-me">Sawa. Nitachukua. Unaweza fungasha leo? Nipe namba ya basi.</div>
+    <div class="chat-bubble from-them">Ndiyo. Malipo yakikamilika nina pack. Nitakupa risiti ya MABASI.</div>
+
+    <div style="text-align:center;font-size:11px;color:#888;margin:12px 0">— SW/EN toggle —</div>
+  </div>
+
+  <!-- Chat Toolbar -->
+  <div class="chat-input">
+    <span>Andika ujumbe... / Type message...</span>
+    <span>📎 💰 📷 ➤</span>
+  </div>
+  <div style="position:absolute;bottom:36px;left:16px;right:16px;display:flex;gap:6px;font-size:11px;">
+    <span style="background:#fff;border:1px solid #ddd;border-radius:999px;padding:5px 10px;">Bei ya mwisho?</span>
+    <span style="background:#fff;border:1px solid #ddd;border-radius:999px;padding:5px 10px;">Nipo tayari</span>
+    <span style="background:#fff;border:1px solid #ddd;border-radius:999px;padding:5px 10px;">Invoice tafadhali</span>
+  </div>
+
+  <div class="bottom-nav" style="position:relative;">
+    <div class="nav-item"><span>🏠</span>Nyumbani</div>
+    <div class="nav-item"><span>📋</span>RFQ</div>
+    <div class="nav-item active"><span>💬</span>Chat</div>
+    <div class="nav-item"><span>📦</span>Maagizo</div>
+    <div class="nav-item"><span>👤</span>Akaunti</div>
+  </div>
+</div>
+</div>
+
+<!-- FRAME 3: SUPPLIER DASHBOARD -->
+<div class="wrap-col">
+<div class="frame-label">3. SUPPLIER DASHBOARD - Kariakoo Gold</div>
+<div class="phone">
+  <div class="statusbar"><span>9:41</span><span>••• 📶 🔋</span></div>
+  <div class="appbar">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div><b>Al-Huda Traders</b><br><span style="font-size:12px"><span class="badge-gold">GOLD SUPPLIER</span> • Trust 4.8 ★</span></div>
+      <div>🔔<span style="background:var(--red);color:#fff;border-radius:99px;padding:1px 6px;font-size:11px">5</span></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="kpi-grid">
+      <div class="kpi"><b>TZS 8.4M</b><span>Mauzo Mwezi huu</span></div>
+      <div class="kpi"><b>14</b><span>Maagizo Hai</span></div>
+      <div class="kpi"><b>23</b><span>RFQ Mpya</span></div>
+      <div class="kpi"><b>98%</b><span>On-time Dispatch</span></div>
+    </div>
+
+    <h3 class="section-title">Maagizo Yanayosubiri Hatua</h3>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;"><b>#KS-8821 • Fatuma M.</b><span class="pill">Malipo Salama</span></div>
+      <div style="font-size:12px;color:#555;margin-top:4px">120x Vitenge • TZS 2,280,000 • Mwanza</div>
+      <div style="font-size:11px;color:var(--muted)">Escrow imelipwa. Fungasha & weka namba ya basi.</div>
+      <button class="btn btn-green" style="margin-top:10px;padding:10px;font-size:13px">Thibitisha & Weka Usafiri →</button>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;"><b>#KS-8819 • Juma Stores</b><span style="background:#fef3c7;color:#92400e;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:700;">Inajadiliwa</span></div>
+      <div style="font-size:12px;color:#555;margin-top:4px">RFQ: Sneakers 200 pairs • Arusha</div>
+      <button class="btn btn-outline" style="margin-top:10px;padding:10px;font-size:13px">Tuma Ofa Chat 💬</button>
+    </div>
+
+    <h3 class="section-title">Bidhaa Zangu & Bei ya Tier</h3>
+    <div class="card">
+      <b>Vitenge Kitenge</b>
+      <div style="font-size:12px;margin-top:6px;color:#444">
+        1-11 pcs: 25,000 TZS<br>
+        12-99 pcs: 21,000 TZS<br>
+        100+ pcs: <b>18,000 TZS</b>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:4px">Stock: 840 pcs • Maoni: 127</div>
+    </div>
+
+    <h3 class="section-title">Verification Status</h3>
+    <div class="card" style="background:#f0fdf4">
+      ✓ BRELA: 123456 ✓ TIN: 123-456-789<br>
+      ✓ Duka: Msimbazi St, Kariakoo - Geo-verified<br>
+      ✓ Muagizaji Aliyethibitishwa<br>
+      <b>Trust Score: 92/100</b>
+    </div>
+
+    <button class="btn btn-green" style="margin-top:6px">+ Ongeza Bidhaa Mpya</button>
+  </div>
+  <div class="bottom-nav">
+    <div class="nav-item active"><span>📊</span>Dashboard</div>
+    <div class="nav-item"><span>📦</span>Bidhaa</div>
+    <div class="nav-item"><span>💬</span>Chat<br><b style="color:var(--red)">5</b></div>
+    <div class="nav-item"><span>💰</span>Malipo</div>
+    <div class="nav-item"><span>👤</span>Wasifu</div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
